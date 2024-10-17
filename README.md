@@ -1,6 +1,6 @@
 # Anlegen des Repositorys:
 
-![[./bilder/repository_angelegt.png]]
+![[bilder/repository_angelegt.png]]
 
 Adresse für das Repository: [https://github.com/ben-boehmer/MeinProjekt](https://github.com/ben-boehmer/MeinProjekt)
 
