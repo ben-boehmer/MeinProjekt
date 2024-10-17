@@ -67,6 +67,7 @@ Dies und das letztendlich committen dieser Änderung wurde durch die Befehle
     git commit -m "merging commit - beide änderungen übernommen"
 
 durchgeführt.
+
 ![](bilder/resolve_conflict.png)
 
 # Update des Online Repositories:
