@@ -13,7 +13,7 @@ Schlüssel gibt, die ich dann benutzt habe:
     ssh-keygen -t ed25519 -C "benboehmer@web.de"
 Dieser Vorgang hat die Schlüssel "id_ed25519" und "id_ed25519.pub" erzeugt im ~/.shh erzeugt:
 
-![[ssh_keys.png]]
+![](ssh_keys.png)
 
 
 # Die Schritte, die du zum lokalen Klonen des Repositorys, zum Konfigurieren von Git und zum Erstellen der initialen Commits durchgeführt hast.
