@@ -89,20 +89,24 @@ Es entsteht ein Konflikt, da in beiden Branches die Datei *main.py* verändert w
 
 ![](bilder/konflikt_code.png)
 
-Hier ist ein Konflikt, da sowohl im *Feature* Branch die Datei *main.py* verändert wurde, als auch im *Main* Branch. Im *Main* Branch wurde die Zeile "print('Im Main Branch hinzugefuegt')" hinzugefügt und im *Feature* Branch wurde die Zeile "print('Im feature Zweig hinzugefuegt)".     
+Hier ist ein Konflikt, da sowohl im *Feature* Branch die Datei *main.py* verändert wurde, als auch im *Main* Branch. Im *Main* Branch wurde die Zeile "print('Im Main Branch hinzugefuegt')" hinzugefügt und im *Feature* Branch wurde die Zeile "print('Im feature Zweig hinzugefuegt)".
+
 ![](bilder/konflikt_vs.png)
+
 Da es bei diesem Beispiel nicht ersichtlich ist, was genau die beste Lösung ist, habe ich mich dafür entschieden beide Änderungen zu übernehmen sodass der Inhalt der *main.py* Datei so aussah:
+
 ![](bilder/konflikt_aufgeloest.png)
+
 Ein Aufruf des Status Befehls gab Auskunft, dass nun nachdem der Konflikt per Hand in der Datei aufgehoben wurde, diese Datei wieder neu wieder dem Staging hinzugefügt werden musste:
+
 ![](bilder/status_after_merge.png)
+
 Dies und das letztendlich committen dieser Änderung wurde durch die Befehle
 
     git add main.py
     git commit -m "merging commit - beide änderungen übernommen"
 
 durchgeführt.
-
-![](bilder/resolve_conflict.png)
 
 # Update des Online Repositories:
 
