@@ -7,10 +7,14 @@ Adresse für das Repository: [https://github.com/ben-boehmer/MeinProjekt](https:
 # Die Schritte, die du zum Erstellen eines SSH-Schlüssels (falls du keinen bereits hattest) durchgeführt hast.
 
 Ich habe mit
+
     ssh-keygen -t rsa -b 4096 -C benboehmer@web.de
+
 Keys angelegt, aber nach einer Recherche fand ich, dass es eine aktuellere Variante zur Erzeugung der
 Schlüssel gibt, die ich dann benutzt habe:
+
     ssh-keygen -t ed25519 -C "benboehmer@web.de"
+    
 Dieser Vorgang hat die Schlüssel "id_ed25519" und "id_ed25519.pub" erzeugt im ~/.shh erzeugt:
 
 ![](bilder/ssh_keys.png)
