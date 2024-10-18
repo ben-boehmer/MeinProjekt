@@ -16,16 +16,31 @@ Dieser Vorgang hat die Schlüssel "id_ed25519" und "id_ed25519.pub" erzeugt im ~
 ![](bilder/ssh_keys.png)
 
 
+Unter **Profil** und dann unter **SSH and GPG keys** wurde mit dem Button **New SSH key**
+mein SSH Schlüssel hinzugefügt. Aus Bequemlichkeit habe ich kein Passwort vergeben,
+was ich aber bei richtigen Repositorys nie machen würde und nachdem alles funktioniert
+auch von mir geändert wird.
+
+![](bilder/ssh_menu.png)
+
 # Die Schritte, die du zum lokalen Klonen des Repositorys, zum Konfigurieren von Git und zum Erstellen der initialen Commits durchgeführt hast.
 
     git clone git@github.com:ben-boehmer/MeinProjekt.git
     
 ![](bilder/cloning_rep.png)
-	cd MeinProjekt
+
+    cd MeinProjekt
 
     git config user.name "Ben Boehmer"
 
     git config user.email "benboehmer@web.de"
+
+Anmerkung: Seit gewisser Zeit vergibt GitHub den Namen des Hauptbranches als
+**main** und nicht mehr Master. Ich habe deshalb mit dem Befehl
+
+    git branch -m master
+
+den Branch umbenannt. 
 
 ![](bilder/configure_repository.png)
 # Die Schritte, die du zum Erstellen des "feature"-Branches, zum Hinzufügen einer neuen Datei zu diesem Branch und zum Committen der Änderungen durchgeführt hast.
