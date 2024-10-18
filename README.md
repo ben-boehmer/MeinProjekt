@@ -45,10 +45,17 @@ den Branch umbenannt.
 ![](bilder/configure_repository.png)
 # Die Schritte, die du zum Erstellen des "feature"-Branches, zum Hinzufügen einer neuen Datei zu diesem Branch und zum Committen der Änderungen durchgeführt hast.
 
+**WICHTIG** - Es wurde hier, wie mit Alexander Redmann kommuniziert wurde, ein Schritt **14a. Bearbeite die Datei "main.py" und führe einen Commit auf dem feature Branch durch**
+hinzugefügt, da sonst kein Merge-Konflikt entstanden wäre. 
 
+Hier wird der "main.py" Datei hinten eine Zeile angehängt:
     git checkout -b feature
     echo "print('Im feauture Zweig hinzugefuegt')" >> main.py
     git add main.py
+
+
+Legt ein Verschnis *util* im Arbeitsverzeichnis an und erzeugt dort die Datei
+*database.py* an. Diese wird dem Staging zugeführt und zusammen committet.
     mkdir -p utils
     echo "print('Ich bin ein Feature')" > utils/database.py
     git add utils/database.py
@@ -56,19 +63,23 @@ den Branch umbenannt.
 
 # Die Schritte, die du zum Mergen des "feature"-Branches in den "master"-Branch und zum Beheben des dabei auftretenden Merge-Konflikts durchgeführt hast.
 
+
+Wechseln zum Branch master:
 	git checkout master
-	echo "print('Im Master Branch hinzugefuegt')" >> main.py
-	git add main.py
-	git commit -m "Hauptdatei aktualisiert"
 
-	git add main.py
+Modifizieren der *main.py* Datei mit stating und commit:
+    echo "print('Im Master Branch hinzugefuegt')" >> main.py
+    git add main.py
+    git commit -m "Hauptdatei aktualisiert"
 
 
-
-	git commit -m "merging commit - beide änderungen übernommen"  
+#### Versuch des Merges des Feature Branchs auf den Master Branch:
 
     git merge feature
-    
+
+Es entsteht ein Konflikt, da in beiden Branches die Datei *main.py* verändert wurde:
+
+![](bilder/konflikt_code)
 
 Hier ist ein Konflikt, da sowohl im *Feature* Branch die Datei *main.py* verändert wurde, als auch im *Main* Branch. Im *Main* Branch wurde die Zeile "print('Im Main Branch hinzugefuegt')" hinzugefügt und im *Feature* Branch wurde die Zeile "print('Im feature Zweig hinzugefuegt)".     
 ![](bilder/konflikt_vs.png)
@@ -87,12 +98,13 @@ durchgeführt.
 
 # Update des Online Repositories:
 
-Verbinden mit GitHub als remote Repository:
+Letztenlich wurden noch alle Veränderungen im GitHub repository übernommen,
+dafür wurde es erst als remote repository angelegt:
 
     git remote add origin https://github.com/ben-boehmer/MeinProjekt.git
 
-
-
 # Update des Online Repositories:
+
+Und letztendlich auf den Server "gepusht":
 
     git push --set-upstream origin master
