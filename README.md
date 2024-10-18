@@ -50,12 +50,14 @@ den Branch umbenannt.
 **WICHTIG** - Es wurde hier, wie mit Alexander Redmann kommuniziert wurde, ein Schritt **14a. Bearbeite die Datei "main.py" und führe einen Commit auf dem feature Branch durch**
 hinzugefügt, da sonst kein Merge-Konflikt entstanden wäre. 
 
-Hier wird der "main.py" Datei hinten eine Zeile angehängt:
+Erschaffung und Wechseln zum neuen Branch *feature*
 
     git checkout -b feature
+
+Hier wird der "main.py" Datei hinten eine Zeile angehängt:
+
     echo "print('Im feauture Zweig hinzugefuegt')" >> main.py
     git add main.py
-
 
 Legt ein Verschnis *util* im Arbeitsverzeichnis an und erzeugt dort die Datei
 *database.py* an. Diese wird dem Staging zugeführt und zusammen committet.
@@ -85,7 +87,7 @@ Modifizieren der *main.py* Datei mit stating und commit:
 
 Es entsteht ein Konflikt, da in beiden Branches die Datei *main.py* verändert wurde:
 
-![](bilder/konflikt_code)
+![](bilder/konflikt_code.png)
 
 Hier ist ein Konflikt, da sowohl im *Feature* Branch die Datei *main.py* verändert wurde, als auch im *Main* Branch. Im *Main* Branch wurde die Zeile "print('Im Main Branch hinzugefuegt')" hinzugefügt und im *Feature* Branch wurde die Zeile "print('Im feature Zweig hinzugefuegt)".     
 ![](bilder/konflikt_vs.png)
