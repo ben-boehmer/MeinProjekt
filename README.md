@@ -35,6 +35,8 @@ auch von mir geändert wird.
 
     git config user.email "benboehmer@web.de"
 
+![](bilder/configure_repository.png)
+
 Anmerkung: Seit gewisser Zeit vergibt GitHub den Namen des Hauptbranches als
 **main** und nicht mehr Master. Ich habe deshalb mit dem Befehl
 
@@ -42,13 +44,14 @@ Anmerkung: Seit gewisser Zeit vergibt GitHub den Namen des Hauptbranches als
 
 den Branch umbenannt. 
 
-![](bilder/configure_repository.png)
+
 # Die Schritte, die du zum Erstellen des "feature"-Branches, zum Hinzufügen einer neuen Datei zu diesem Branch und zum Committen der Änderungen durchgeführt hast.
 
 **WICHTIG** - Es wurde hier, wie mit Alexander Redmann kommuniziert wurde, ein Schritt **14a. Bearbeite die Datei "main.py" und führe einen Commit auf dem feature Branch durch**
 hinzugefügt, da sonst kein Merge-Konflikt entstanden wäre. 
 
 Hier wird der "main.py" Datei hinten eine Zeile angehängt:
+
     git checkout -b feature
     echo "print('Im feauture Zweig hinzugefuegt')" >> main.py
     git add main.py
@@ -56,6 +59,7 @@ Hier wird der "main.py" Datei hinten eine Zeile angehängt:
 
 Legt ein Verschnis *util* im Arbeitsverzeichnis an und erzeugt dort die Datei
 *database.py* an. Diese wird dem Staging zugeführt und zusammen committet.
+
     mkdir -p utils
     echo "print('Ich bin ein Feature')" > utils/database.py
     git add utils/database.py
@@ -65,9 +69,11 @@ Legt ein Verschnis *util* im Arbeitsverzeichnis an und erzeugt dort die Datei
 
 
 Wechseln zum Branch master:
+
 	git checkout master
 
 Modifizieren der *main.py* Datei mit stating und commit:
+
     echo "print('Im Master Branch hinzugefuegt')" >> main.py
     git add main.py
     git commit -m "Hauptdatei aktualisiert"
